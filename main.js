@@ -1,29 +1,28 @@
 class Person{
-    constructor(name,age,sex) {
-        this.name = name;
+    constructor(passport,age,sex) {
+        this.passport = passport;
         this.age = age;
-        this.sex=sex;
+        this.sex= sex;
+        this.name = 'KK';
     }
     getName(){
-        return this.name;
+        return this.passport;
     }
     getAge(){
-        return 26;
-    }
-    getAge(text){
-        return 20;
+        return this.age;
     }
     getSex(){
         return this.sex;
     }
 }
 class Staff extends Person{
-    constructor(name) {
-        super(name);
+    constructor(passport) {
+        super(passport);
+        this.name = 'Khoa';
+
     }
 }
 var person1 = new Person();
-var Staff1 = new Staff('Khoa');
-console.log(person1.getAge());
-console.log(person1.getAge('text'));
+var Staff1 = new Staff(42152);
+console.log(person1);
 console.log(Staff1);
